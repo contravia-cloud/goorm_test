@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        draw star by number
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <style>
+        form {
+            /* Just to center the form on the page */
+            margin: 0 auto;
+            width: 400px;
+            /* To see the outline of the form */
+            padding: 1em;
+            border: 1px solid #CCC;
+            border-radius: 1em;
+        }
+        form div + div {
+            /* div div 사이에 여백 추가*/
+            margin-top: 1em;
+        }
+        label {
+            /* To make sure that all label have the same size and are properly align */
+            display: inline-block;
+            width: 90px;
+            text-align: right;
+        }
+        .button {
+            /* To position the buttons to the same position of the text fields */
+            padding-left: 90px; /* same size as the label elements */
+        }
+
+        button {
+            /* This extra margin represent roughly the same space as the space
+            between the labels and their text fields */
+            margin-left: .5em;
+        }
+    </style>
+</head>
+<body>
+    <h1> -입력하시오- </h1><br>
+    <form method="GET" action="/first_page">
+        <div>
+            <label for="char1"> 품목 </label>
+            <input type="text" name="pum_nm">
+        </div>
+        <div>
+            <label for="char1"> 검색일자 </label>
+            <input type="text" name="p_ymd">
+        </div>
+        <div>
+            <label for="num"> 전일날짜 </label>
+            <input type="text" name="p_jymd">
+        </div>
+        <div>
+            <label for="num"> 전년도날짜 </label>
+            <input type="text" name="p_jjymd">
+        </div>
+        <div class='button'>
+            <button type="submit">읽어오기</button>
+        </div>
+    </form>
+    <div>
+        <p>
+            {{data1}}
+            {{data2}}
+
+        </p>
+    </div>
+</body>
+</html>
